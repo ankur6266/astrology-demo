@@ -1,0 +1,52 @@
+{
+    "1": [
+      {"value": "A"},
+      {"value": "I"},
+      {"value": "J"},
+      {"value": "Q"},
+      {"value": "Y"}
+    ],
+    "2": [
+      {"value": "B"},
+      {"value": "K"},
+      {"value": "R"},
+      {"value": ""}
+    ],
+    "3": [
+      {"value": "C"},
+      {"value": "G"},
+      {"value": "L"},
+      {"value": "S"}
+    ],
+    "4": [
+      {"value": "D"},
+      {"value": "M"},
+      {"value": "T"},
+      {"value": "X"}
+    ],
+    "5": [
+      {"value": "E"},
+      {"value": "H"},
+      {"value": "N"},
+      {"value": ""}
+    ],
+    "6": [
+      {"value": "U"},
+      {"value": "V"},
+      {"value": "W"},
+      {"value": ""}
+    ],
+    "7": [
+      {"value": "O"},
+      {"value": "Z"},
+      {"value": ""},
+      {"value": ""}
+    ],
+    "8": [
+      {"value": "F"},
+      {"value": "P"},
+      {"value": ""},
+      {"value": ""}
+    ]
+  }
+  
