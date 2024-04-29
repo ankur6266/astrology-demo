@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+
+
+.numbersAlphaTable table, .numbersAlphaTable tr, .numbersAlphaTable td, .numbersAlphaTable th{
+  border: 1px solid black;
+  padding: 10px 40px;
+}
