@@ -56,7 +56,11 @@ function InputForm({setNameData, setNumberData}) {
                 Enter your name to get the results....Enter only alphabets
             </Form.Text>
             {showWarning && <p style={{ color: 'red' }}>Only alphabetic characters allowed. Non-alphabetic characters removed.</p>}
+<<<<<<< HEAD
             <Col className='text-center mt-2 mb-2'>
+=======
+            <Col className='m-3'>
+>>>>>>> 3c62f7999394704c4f77d21349c78c31337f8b9b
             <button className='btn btn-primary'>Submit</button>
             </Col>
         </Form>
