@@ -9,8 +9,38 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Table from './components/Table';
+import { useState } from 'react';
 
 function App() {
+
+  const [name, setName] = useState("")
+  const [numbersArr, setNumberArr] = useState([])
+  const [total, setTotal] = useState()
+  // const [destiny, setDestiny] = useState(1)
+  
+  const handleName = (name) => {
+    setName(name);
+  }
+
+  const handleNumbers = (numbers) => {
+    setNumberArr(numbers);
+  
+    setTotal(() => {
+      const sum = numbers.reduce((a, b) => a + b, 0);
+      return sum;
+    });
+
+
+    // if (total.length === 2 && total[0] === total[1]) {
+    //   return true;
+    // } else {
+    //   setDestiny(destiny+1);
+    // }
+
+
+  }
+  
+
   return (
     <div className='app'>
     <Container>
@@ -23,8 +53,18 @@ function App() {
       </Row>
       <Row>
         <Col lg={6}>
-          <InputForm />
+          <InputForm setNameData={handleName} setNumberData={handleNumbers}/>
+         </Col>
+            { name !== "" && (
+        <Col lg={12}>
+          <h6>Chaldean Name Numerology Reading of {name}</h6>
+          <p>Name - {name}</p>
+          <p>Numbers - {numbersArr}</p>
+          <h5>Compound Name Number/Namank (Numerology Total of Your Name): {total}</h5>
+          {/* <p>Destiny - {destiny}</p>   */}
         </Col>
+    )}
+
       </Row>
       <Row>
         <Table />

@@ -4,9 +4,8 @@ import { Col } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
 import { jsonData } from '../data';
 
-function InputForm() {
+function InputForm({setNameData, setNumberData}) {
     const [value, setValue] = useState('');
-    const [number, setNumber] = useState();
     const [showWarning, setShowWarning] = useState(false);
 
     const handleInputChange = (event) => {
@@ -34,9 +33,10 @@ function InputForm() {
                 return foundKey.length ? parseInt(foundKey[0]) : null;
               });
             
-        setNumber(resultNumb);
-
-        console.log(number);
+        // setNumber(resultNumb);
+        setNameData(value);
+        setNumberData(resultNumb)
+        
 
     }
 
