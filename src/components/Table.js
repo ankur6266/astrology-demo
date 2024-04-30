@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Table() {
   return (
-    <div className="numbersAlphaTable">
+    <div className="numbersAlphaTable mt-5 mb-5">
         <h6>Numerology Number Chart</h6>
       <table class="">
         <tbody>
