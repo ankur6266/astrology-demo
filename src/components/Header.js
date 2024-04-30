@@ -2,6 +2,11 @@ import Nav from 'react-bootstrap/Nav';
 
 function Header() {
   return (
+    <>
+    <div className='announcement-bar'>
+      <a href="/"><img src="https://astrologyfutureeye.com/images/header/afe-1.png" alt="AstrologyFutureEye.Com" height="46" width="475" /></a>
+      <p className="text-center">Indian Astrology Portal</p>
+    </div>  
     <Nav
       activeKey="/home"
       onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
@@ -21,6 +26,7 @@ function Header() {
         </Nav.Link>
       </Nav.Item>
     </Nav>
+    </>
   );
 }
 

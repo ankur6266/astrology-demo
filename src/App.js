@@ -10,6 +10,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Table from './components/Table';
 import { useState } from 'react';
+import { Card } from 'react-bootstrap';
 
 function App() {
 
@@ -43,18 +44,21 @@ function App() {
 
   return (
     <div className='app'>
-    <Container>
-      <Header />
+    <Container fluid className='p-0'>
+      <Header/>
+      <Container>
       <Row>
         <Col>
-          <h4>Chaldean Name Numerology - Destiny, Heart Desire and Dream Numbers</h4>
-          <h6 className='m-auto'>Online Name Numerology Calculator</h6>
+          <h4 className='text-center'>Chaldean Name Numerology - Destiny, Heart Desire and Dream Numbers</h4>
+          <h6 className='text-center'>Online Name Numerology Calculator</h6>
+          <p className='mt-5'><strong>Calculate name number by Chaldean name numerology</strong>: This is the most accurate and ancient alphabet's number numerology system, which was developed by Chaldean and inspired by Indian Vedic numerology. Another numeral math system is the Pythagorean. In the Chaldean name numerology, the popular or most known name is used to predict the name numbers and in the Pythagorean numerology, the birth or legal name should be used to predict the numerology forecast.</p>
         </Col>
       </Row>
       <Row>
-        <Col lg={6}>
+        <Card className='p-3'>
+        <Col lg={6} className='m-auto'>
           <InputForm setNameData={handleName} setNumberData={handleNumbers}/>
-         </Col>
+        </Col>
             { name !== "" && (
         <Col lg={12}>
           <h6>Chaldean Name Numerology Reading of {name}</h6>
@@ -64,11 +68,12 @@ function App() {
           {/* <p>Destiny - {destiny}</p>   */}
         </Col>
     )}
-
+      </Card>
       </Row>
       <Row>
         <Table />
       </Row>
+      </Container>
     </Container>
     </div>
   );
