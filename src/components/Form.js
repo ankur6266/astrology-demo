@@ -6,12 +6,13 @@ import { jsonData } from '../data';
 
 function InputForm() {
     const [value, setValue] = useState('');
+    const [number, setNumber] = useState();
     const [showWarning, setShowWarning] = useState(false);
 
     const handleInputChange = (event) => {
         const inputValue = event.target.value;
         const filteredValue = inputValue.replace(/[^A-Za-z]/g, ''); 
-
+        
         if (inputValue !== filteredValue) {
             setShowWarning(true);
             setTimeout(() => setShowWarning(false), 2000);
@@ -23,7 +24,20 @@ function InputForm() {
 
     const onFormSubmit = (event) => {
         event.preventDefault();
-        // alert(value)
+        let letters = value.split('');
+        letters = letters.map(str => str.toUpperCase());
+        // alert(letters)
+        // console.log(jsonData);
+
+        let resultNumb = letters.map(letter => {
+                const foundKey = Object.keys(jsonData).filter(key => jsonData[key].some(obj => obj.value === letter));
+                return foundKey.length ? parseInt(foundKey[0]) : null;
+              });
+            
+        setNumber(resultNumb);
+
+        console.log(number);
+
     }
 
     return (
